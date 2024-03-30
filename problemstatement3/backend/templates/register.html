@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Dream Housing Finance</title>
+</head>
+  <body>
+    <h2 style="text-align: center;">Register</h2>
+    <form action="{{ url_for('register')}}" method="post"  style="text-align: center; display: flex; flex-direction: row; align-items: center; justify-content: center;">
+        <div style="display: flex; flex-direction: column; margin-right: 10px;">
+            <label for="username" style="text-align: left;">Username:</label>
+            <input type="text" id="username" name="username" required>
+        </div>
+        <div style="display: flex; flex-direction: column; flex-direction: column; margin-right: 10px;">
+            <label for="password" style="text-align: left;">Password:</label>
+            <input type="password" id="password" name="password" required>
+        </div>
+        <input type="submit" value="Register" style="align-self:last baseline;">
+    </form>
+    <form action="{{ url_for('login') }}" style="text-align: center; margin-top: 20px;">
+        <button type="submit" style="background-color: teal; border-radius: 5px; padding: 10px; color: white; border-width: 1px;">Already have an account? Log In</button>
+    </form>
+  </body>
+</html>

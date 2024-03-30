@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Dream Housing Finance</title>
+    </head>
+    <body>
+
+        <div style="display: flex; flex-direction: column; align-items: center;">
+            <h1 style="font-size:30px">House Loan Eligibility Prediction</h1>
+            <div>
+            <form action="{{ url_for('predict')}}" method="post">
+                <h3>Please enter the details to check your house loan eligibility</h3>
+
+                <p>Gender
+                    <select name="Gender" id="gender" required="required">
+                        <option value="1">Male</option>
+                        <option value="0">Female</option>
+                    </select>
+                </p>
+
+                <p>Married
+                    <select name="Married" id="married" required="required">
+                        <option value="1">Yes</option>
+                        <option value="0">No</option>
+                    </select>
+                </p>
+
+                <p>Dependents
+                    <input name="Dependents" id="dependents" required="required" value="0">
+                </p>
+
+                <p>Education
+                    <select name="Education" id="education" required="required">
+                        <option value="0">Graduate</option>
+                        <option value="1">Non Graduate</option>
+                    </select>
+                </p>
+                
+                <p>Self Employed
+                    <select name="Self_Employed" id="self_employed" required="required">
+                        <option value="1">Yes</option>
+                        <option value="0">No</option>
+                    </select>
+                </p>
+
+                <p>Applicant Income ($) <input name="Applicant_Income" id="applicant_income" type="number" required="required"></p>
+
+                <p>Co-applicant Income ($) <input name="Coapplicant_Income" id="coapplicant_income" type="number" required="required"></p>
+
+                <p>Loan Amount in thousands ($) <input name="Loan_Amount" id="loan_amount" type="number" required="required"></p>
+
+                <p>Loan Amount Term (in months) <input name="Loan_Amount_Term" id="loan_amount_term" type="number" required="required"></p>
+
+                <p>Credit History
+                    <select name="Credit_History" id="history" required="required">
+                        <option value="1">Yes</option>
+                        <option value="0">No</option>
+                    </select>
+                </p>
+
+                <p>Property Area
+                    <select name="Property_Area" id="property_area" required="required">
+                        <option value="0">Rural</option>
+                        <option value="1">Semiurban</option>
+                        <option value="2">Urban</option>
+                    </select>
+                </p>
+
+                <h3> {{ message }} </h3>
+                    
+                <br><button type="submit" style="background-color: teal; border-radius: 5px; padding: 10px; color: white; border-width: 1px;">Check Eligibility</button>
+                <br>
+            </form>
+            <br>
+            <form action="{{ url_for('logout') }}" style="margin-top: 20px;">
+                <button type="submit" style="background-color: teal; border-radius: 5px; padding: 10px; color: white; border-width: 1px;">Press here to logout</button>
+            </form>
+            </div> 
+        </div>
+    </body>
+</html>

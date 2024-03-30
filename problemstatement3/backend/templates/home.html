@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Dream Housing Finance</title>
+    </head>
+    <body>
+        <h1 style="text-align: center;">Please Login/Signup to check loan eligibility.</h1>
+        <br/>
+        <form action="{{ url_for('login') }}" style="text-align: center;">
+            <button type="submit" style="background-color: teal; border-radius: 5px; padding: 10px; color: white; border-width: 1px;">Login Now</button>
+        </form>
+        <br/>
+        <form action="{{ url_for('register') }}" style="text-align: center;">
+            <button type="submit" style="background-color: teal; border-radius: 5px; padding: 10px; color: white; border-width: 1px;">Register Now</button>
+        </form>
+    </body>
+</html>
